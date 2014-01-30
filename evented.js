@@ -2,7 +2,6 @@
  laxcomma: true
  */
 
-// yield an event so that it may continue other events and return when event chain has completed.
 // Evented
 (function (definition) {
     // Turn off strict mode for this function so we can assign to global.
@@ -15,6 +14,7 @@
 
     // Montage Require
     if (typeof bootstrap === "function") {
+        Extendable = require('Extendable');
         bootstrap("Evented", definition);
 
     // CommonJS
@@ -25,7 +25,7 @@
     // RequireJS
     } else if (typeof define === "function" && define.amd) {
         Extendable = require('Extendable');
-        define(definition);
+        define('Evented',definition);
 
     // SES (Secure EcmaScript)
     } else if (typeof ses !== "undefined") {

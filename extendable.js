@@ -18,7 +18,7 @@
 
     // RequireJS
     } else if (typeof define === "function" && define.amd) {
-        define(definition);
+        define('Extendable',definition);
 
     // SES (Secure EcmaScript)
     } else if (typeof ses !== "undefined") {

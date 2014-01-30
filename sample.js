@@ -1,4 +1,26 @@
-var Evented = require('./evented.js');
+
+if (typeof (Evented) == 'undefined') {
+    // Montage Require
+    if (typeof bootstrap === "function") {
+        Evented = require('Evented');
+
+    // CommonJS
+    } else if (typeof exports === "object") {
+        Evented = require('./evented.js');
+
+    // RequireJS
+    } else if (typeof define === "function" && define.amd) {
+        Evented = require('Evented');
+
+    // SES (Secure EcmaScript)
+    } else if (typeof ses !== "undefined") {
+        if (!ses.ok()) {
+            return;
+        } else {
+            Evented = ses.Evented;
+        }
+    }
+}
 
 function ParentClass() {
     console.log("Parent constructor");
