@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Extendable Example.</title>
@@ -5,7 +6,7 @@
 	<script src="Evented.js"></script>
 	<script>
 		console = {}
-		console.log=function(){document.write.apply(document,[].slice.call(arguments));document.write("\n");}
+		console.log=document.writeln.bind(document);
 	</script>
 </head>
 <body>
