@@ -1,4 +1,4 @@
-var Evented = require('./evented.jquery.js');
+var Evented = require('./evented.js');
 
 function ParentClass() {
     console.log("Parent constructor");
