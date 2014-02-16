@@ -86,12 +86,12 @@
 		// List of hooks of parents.
 		child.__extend = self.__extend.slice();
 
-		if (child._extend)
-			child.__extend.push(child._extend); // original extend
+		if (child.extendHook)
+			child.__extend.push(child.extendHook); // original extend
 
-		child._extend = Extendable._extend; // shim extend to call up the chain first.
+		child.extendHook = Extendable.extendHook; // shim extend to call up the chain first.
 
-		self._extend(child);
+		self.extendHook(child);
 		return child;
 	};
 
@@ -166,7 +166,7 @@
 		delete Extendable.objValues[this._guid];
 	};
 
-	Extendable._extend = function (child) {
+	Extendable.extendHook = function (child) {
 		this.__extend.forEach(function (f) {
 			f.call(this, child);
 		}, this);
