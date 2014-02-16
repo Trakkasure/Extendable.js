@@ -133,7 +133,7 @@
         this.fire('disposed');
     };
 
-    Evented._extend = function (child) {
+    Evented.extendHook = function (child) {
         child.events = (this.events || []).concat(child.events || []);
     };
 
