@@ -8,9 +8,7 @@
     /* jshint strict: false */
 
     // This file will function properly as a <script> tag, or a module
-    // using CommonJS and NodeJS or RequireJS module formats.  In
-    // Common/Node/RequireJS, the module exports the Q API and when
-    // executed as a simple <script>, it creates a Q global instead.
+    // using CommonJS and NodeJS or RequireJS module formats.
 
     // Montage Require
     if (typeof bootstrap === "function") {
