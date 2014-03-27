@@ -56,7 +56,7 @@
 	// Handle staic super calls on immediate subclass
 	Extendable['super'] = function () {
 		// Class Super
-		console.error("This point shouldn't be reached.");
+		console.warn("Please provide a constructor for your subclass.");
 		return this;
 	};
 
