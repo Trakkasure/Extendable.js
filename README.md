@@ -2,7 +2,9 @@ Extendable.js
 =============
 
 
-Extendable.js is a simple class inheritance library for heirarchical development.
+Extendable.js is a simple library for heirarchical development.
+It was developed so that people who are comfortable with development
+methodologies used in Java can use similar capabilities in JavaScript.
 
 Minimum requirement is that the javascript processor supports ES5.
 
